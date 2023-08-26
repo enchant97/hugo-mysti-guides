@@ -1,0 +1,12 @@
+title: Mysti Guides Theme
+copyright: Leo Spratt
+
+menu:
+  main:
+    - name: "Home"
+      url: "/"
+
+module:
+  hugoVersion:
+    extended: true
+    min: "0.117.0"
