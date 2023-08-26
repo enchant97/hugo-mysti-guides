@@ -5,7 +5,9 @@ menu:
   main:
     - name: "Home"
       url: "/"
-
+  sub:
+    - name: Repository
+      url: "https://github.com/enchant97/hugo-mysti-guides"
 module:
   hugoVersion:
     extended: true

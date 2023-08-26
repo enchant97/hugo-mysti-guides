@@ -1,10 +1,15 @@
 <header>
-    <span>{{ site.Title }}</span>
+    <strong class="site-title">{{ site.Title }}</strong>
     <nav>
-        <ul>
+        <menu>
         {{ range site.Menus.main }}
-        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        <li><a class="btn" href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
-        </ul>
+        </menu>
     </nav>
+    <menu>
+        {{ range site.Menus.sub }}
+        <li><a class="btn" href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+    </menu>
 </header>
