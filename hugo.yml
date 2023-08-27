@@ -15,6 +15,9 @@ menu:
       url: "/docs/"
   sub:
     - name: Repository
+      params:
+        icon: "git-branch"
+        hideName: true
       url: "https://github.com/enchant97/hugo-mysti-guides"
 module:
   hugoVersion:

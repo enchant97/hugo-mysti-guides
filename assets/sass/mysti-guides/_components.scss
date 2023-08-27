@@ -1,3 +1,13 @@
+.icon-feather {
+    height: 1.5rem;
+    width: 1.5rem;
+    stroke: $fg-base-100;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
 .btn {
     padding: .6rem .9rem;
     text-decoration: none;
@@ -6,6 +16,11 @@
     border-radius: $rounded;
     text-align: center;
     font-weight: bold;
+    transition: 350ms;
+}
+
+.btn:hover {
+    background-color: $bg-base-300;
 }
 
 .content {

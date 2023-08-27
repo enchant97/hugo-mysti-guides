@@ -1,3 +1,9 @@
+a {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+}
+
 body {
     background-color: $bg-base-100;
     header {
@@ -5,14 +11,16 @@ body {
         align-items: center;
         gap: 1.5rem;
         background-color: $bg-base-200;
-        padding: 1.2rem 1rem;
+        padding: .6rem 1rem;
         margin-bottom: 2rem;
         box-shadow: $box-shadow;
         .site-title {
             font-size: 1.25rem;
+            font-weight: bold;
         }
         nav {
             flex: 1;
+            overflow-x: auto;
         }
         menu {
             display: flex;
@@ -42,5 +50,11 @@ body {
                 font-size: .8rem;
             }
         }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        flex-direction: column;
     }
 }
