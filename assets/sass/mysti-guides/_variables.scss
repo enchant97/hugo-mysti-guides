@@ -1,10 +1,5 @@
-$font-family-main: 'Noto Sans', sans-serif;
-
-$bg-base-100: var(--bg-base-100);
-$bg-base-200: var(--bg-base-200);
-
-$fg-base-100: var(--fg-base-100);
-$fg-base-200: var(--fg-base-200);
+@import "variables/colors";
+@import "variables/fonts";
 
 $rounded: 6px;
 
