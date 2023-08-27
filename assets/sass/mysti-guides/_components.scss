@@ -28,3 +28,68 @@
         border-radius: $rounded;
     }
 }
+
+.content-type--default {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1.4rem;
+    background-color: $bg-base-200;
+    border-radius: $rounded;
+    >article {
+        h1, h2, h3, h4, h5, h6 {
+            margin: .5rem 0;
+        }
+        >h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.content-type--docs {
+    display: flex;
+    gap: 1.5rem;
+    max-width: 1500px;
+    margin: auto;
+    >nav, >article {
+        background-color: $bg-base-200;
+        padding: 1.4rem;
+        border-radius: $rounded;
+    }
+    >nav {
+        width: 15rem;
+        menu {
+            list-style: none;
+            ul {
+                list-style: none;
+                li {
+                    margin-left: 2rem;
+                }
+            }
+        }
+    }
+    >article {
+        flex: 1;
+        h1, h2, h3, h4, h5, h6 {
+            margin: .5rem 0;
+        }
+        >h1 {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@media print {
+    .content-type--docs .sidebar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .content-type--docs {
+        flex-direction: column;
+        .sidebar {
+            width: initial;
+        }
+    }
+}
