@@ -5,6 +5,8 @@ menu:
   main:
     - name: "Home"
       url: "/"
+    - name: "Blog"
+      url: "/blog"
   sub:
     - name: Repository
       url: "https://github.com/enchant97/hugo-mysti-guides"
