@@ -1,6 +1,10 @@
 title: Mysti Guides Theme
 copyright: Leo Spratt
 
+markup:
+  highlight:
+    noClasses: false
+
 menu:
   main:
     - name: "Home"

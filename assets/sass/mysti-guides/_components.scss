@@ -12,6 +12,49 @@
     background-color: $bg-base-100;
     padding: 1rem;
     border-radius: $rounded;
+    h1, h2, h3, h4, h5, h6 {
+        margin: .8rem 0;
+    }
+    p, ul, ol {
+        padding: .4rem 0;
+    }
+    li {
+        margin-left: 1.5rem;
+    }
+}
+
+.highlight {
+    background-color: $bg-base-300;
+    padding: .9rem .9rem;
+    border-radius: $rounded;
+    overflow: hidden;
+    overflow-x: auto;
+    code, pre, span, table {
+        font-family: $font-family-mono;
+        font-size: .86rem;
+        font-weight: bold;
+    }
+    table {
+        width: auto;
+    }
+    .lntd:first-child {
+        user-select: none;
+    }
+    .chroma {
+        border-radius: $rounded;
+        .lntd {
+            vertical-align: top;
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+        .lntable {
+            border-spacing: 0;
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+    }
 }
 
 .pages-list {
@@ -70,9 +113,7 @@
     }
     >article {
         flex: 1;
-        h1, h2, h3, h4, h5, h6 {
-            margin: .5rem 0;
-        }
+        min-width: 0;
         >h1 {
             margin-bottom: 2rem;
         }
@@ -80,15 +121,23 @@
 }
 
 @media print {
-    .content-type--docs .sidebar {
+    .content-type--docs >nav {
         display: none;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .content-type--docs {
+        >nav {
+            width: 10rem;
+        }
     }
 }
 
 @media screen and (max-width: 900px) {
     .content-type--docs {
         flex-direction: column;
-        .sidebar {
+        >nav {
             width: initial;
         }
     }
