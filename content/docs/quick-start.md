@@ -6,6 +6,7 @@ title: Quick Start
 Like most projects there are some things needed before you can use it.
 
 - Hugo Extended (extended edition, v0.117.0 or later)
+    - Check with `hugo version`
 - Git
 - Go (if using Hugo modules)
 

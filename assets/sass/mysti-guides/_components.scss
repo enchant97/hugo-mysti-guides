@@ -36,18 +36,33 @@
     li {
         margin-left: 1.5rem;
     }
+
+    code {
+        padding: .2rem .5rem;
+        background-color: $bg-base-300;
+        font-family: $font-family-mono;
+        font-size: .86rem;
+        font-weight: bold;
+        border-radius: $rounded;
+    }
 }
 
 .highlight {
     background-color: $bg-base-300;
-    padding: .9rem .9rem;
+    padding: .4rem .9rem;
     border-radius: $rounded;
     overflow: hidden;
     overflow-x: auto;
+    code {
+        padding: 0;
+    }
     code, pre, span, table {
         font-family: $font-family-mono;
         font-size: .86rem;
         font-weight: bold;
+    }
+    pre code >span {
+        margin-right: .9rem;
     }
     table {
         width: auto;
