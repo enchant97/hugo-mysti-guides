@@ -54,7 +54,8 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-    header {
+    body header {
         flex-direction: column;
+        gap: .2rem;
     }
 }

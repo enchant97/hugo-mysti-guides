@@ -187,6 +187,10 @@
         flex-direction: column;
         >nav {
             width: initial;
+            >menu {
+                max-height: 20vh;
+                overflow: auto;
+            }
         }
     }
 }
