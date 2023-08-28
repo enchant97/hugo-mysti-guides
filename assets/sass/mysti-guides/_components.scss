@@ -105,7 +105,7 @@
 .content-type--default {
     max-width: 1200px;
     margin: auto;
-    padding: 1.4rem;
+    padding: 1rem;
     background-color: $bg-base-200;
     border-radius: $rounded;
     >article {
@@ -126,18 +126,36 @@
     margin: auto;
     >nav, >article {
         background-color: $bg-base-200;
-        padding: 1.4rem;
+        padding: 1rem;
         border-radius: $rounded;
     }
     >nav {
+        overflow-y: auto;
         width: 15rem;
+        .level-0 {
+            display: flex;
+            font-size: 1.2rem;
+        }
         menu {
             list-style: none;
-            ul {
-                list-style: none;
+        }
+        >menu {
+            background-color: $bg-base-100;
+            padding: 1rem;
+            border-radius: $rounded;
+            menu {
                 li {
-                    margin-left: 2rem;
+                    margin-left: 1rem;
                 }
+            }
+        }
+        menu, li {
+            display: flex;
+            flex-direction: column;
+            gap: .2rem;
+            .btn {
+                padding: .4rem .6rem;
+                font-size: .9rem;
             }
         }
     }
