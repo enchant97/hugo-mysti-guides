@@ -1,5 +1,6 @@
 @mixin theme_light {
     color-scheme: light;
+    --bg-primary: var(--bg-primary--light);
     --bg-base-100: var(--bg-base-100--light);
     --bg-base-200: var(--bg-base-200--light);
     --bg-base-300: var(--bg-base-300--light);
@@ -11,6 +12,7 @@
 
 @mixin theme_dark {
     color-scheme: dark;
+    --bg-primary: var(--bg-primary--dark);
     --bg-base-100: var(--bg-base-100--dark);
     --bg-base-200: var(--bg-base-200--dark);
     --bg-base-300: var(--bg-base-300--dark);
@@ -21,9 +23,11 @@
 }
 
 :root {
+    --bg-primary--light: #{$bg-primary--light};
     --bg-base-100--light: #{$bg-base-100--light};
     --bg-base-200--light: #{$bg-base-200--light};
     --bg-base-300--light: #{$bg-base-300--light};
+    --bg-primary--dark: #{$bg-primary--dark};
     --bg-base-100--dark: #{$bg-base-100--dark};
     --bg-base-200--dark: #{$bg-base-200--dark};
     --bg-base-300--dark: #{$bg-base-300--dark};

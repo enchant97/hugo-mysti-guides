@@ -14,6 +14,7 @@ body {
         padding: .6rem 1rem;
         margin-bottom: 2rem;
         box-shadow: $box-shadow;
+        border-bottom: .4rem solid $bg-primary;
         .site-title {
             font-size: 1.25rem;
             font-weight: bold;
