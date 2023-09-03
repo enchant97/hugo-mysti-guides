@@ -29,6 +29,5 @@ module:
     extended: true
     min: "0.117.0"
 
-  mounts:
-    - source: site/content
-      target: content
+theme: hugo-mysti-guides
+themesDir: ../..
