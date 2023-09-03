@@ -28,3 +28,7 @@ module:
   hugoVersion:
     extended: true
     min: "0.117.0"
+
+  mounts:
+    - source: site/content
+      target: content
