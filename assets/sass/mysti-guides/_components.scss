@@ -30,6 +30,11 @@
     h1, h2, h3, h4, h5, h6 {
         margin: .8rem 0;
     }
+    blockquote {
+        border-left: .45rem solid $bg-primary;
+        margin: .8rem 0;
+        padding-left: 1rem;
+    }
     p, ul, ol {
         padding: .4rem 0;
     }
@@ -50,6 +55,7 @@
 .highlight {
     background-color: $bg-base-300;
     padding: .4rem .9rem;
+    margin: .4rem 0;
     border-radius: $rounded;
     overflow: hidden;
     overflow-x: auto;
