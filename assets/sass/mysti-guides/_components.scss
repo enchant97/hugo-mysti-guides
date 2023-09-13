@@ -108,6 +108,20 @@
     }
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.4rem;
+    margin: .5rem 0;
+}
+
+.grid-container.center {
+    justify-items: center;
+    .element {
+        text-align: center;
+    }
+}
+
 .content-type--default {
     max-width: 1200px;
     margin: auto;
@@ -189,6 +203,10 @@
 }
 
 @media screen and (max-width: 900px) {
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+    }
     .content-type--docs {
         flex-direction: column;
         >nav {
