@@ -122,6 +122,22 @@
     }
 }
 
+.collapse-container {
+    background-color: $bg-base-200;
+    border-radius: $rounded;
+    padding: .8rem;
+    summary {
+        user-select: none;
+        cursor: pointer;
+    }
+    .element{
+        margin-top: .5rem;
+        padding: .2rem .4rem;
+        background-color: $bg-base-200;
+        border-radius: $rounded;
+    }
+}
+
 .content-type--default {
     max-width: 1200px;
     margin: auto;
