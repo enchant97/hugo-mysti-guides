@@ -9,6 +9,15 @@ img {
     border-radius: $rounded;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,td {
+        padding: .2rem;
+    }
+}
+
 body {
     background-color: $bg-base-100;
     header {
