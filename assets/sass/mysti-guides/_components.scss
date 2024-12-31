@@ -44,7 +44,7 @@
 
     code {
         padding: .2rem .5rem;
-        background-color: $bg-base-300;
+        background-color: $bg-base-200;
         font-family: $font-family-mono;
         font-size: .86rem;
         font-weight: bold;
@@ -53,7 +53,7 @@
 }
 
 .highlight {
-    background-color: $bg-base-300;
+    background-color: $bg-base-200;
     padding: .4rem .9rem;
     margin: .4rem 0;
     border-radius: $rounded;
@@ -95,16 +95,19 @@
 
 .pages-list {
     list-style: none;
-    background-color: $bg-base-100;
     padding: 1rem;
-    border-radius: $rounded;
     gap: 1rem;
     display: flex;
     flex-direction: column;
-    li {
+    li a {
+        display: block;
         padding: 1rem;
-        border: solid $bg-base-200 .2rem;
+        background-color: var(--bg-base-100);
         border-radius: $rounded;
+    }
+    li a:hover {
+        transition-duration: 350ms;
+        background-color: $bg-base-300;
     }
 }
 
@@ -141,10 +144,11 @@
 .content-type--default {
     max-width: 1200px;
     margin: auto;
-    padding: 1rem;
-    background-color: $bg-base-200;
-    border-radius: $rounded;
-    >article {
+    section {
+        background-color: $bg-base-200;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: $rounded;
         h1, h2, h3, h4, h5, h6 {
             margin: .5rem 0;
         }

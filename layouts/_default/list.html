@@ -2,25 +2,28 @@
 
 <div class="content-type--default">
     <article>
-        <h1>{{ .Title }}</h1>
-        <div class="content">
-            {{ .Content }}
-        </div>
-        <div>
+        <section>
+            <h1>{{ .Title }}</h1>
+            <div class="content">
+                {{ .Content }}
+            </div>
+        </section>
+        <section>
+            <h2>Posts</h2>
             {{ $paginator := .Paginate (.Pages.ByPublishDate.Reverse) }}
             {{ template "_internal/pagination.html" . }}
             <ul class="pages-list">
                 {{ range $paginator.Pages }}
                 <li>
                     <article>
-                        <h2><a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
+                        <h3><a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></h3>
                         <p>{{ .Description }}</p>
                     </article>
                 </li>
                 {{ end }}
             </ul>
             {{ template "_internal/pagination.html" . }}
-        </div>
+        </section>
     </article>
 </div>
 

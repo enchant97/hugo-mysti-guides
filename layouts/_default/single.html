@@ -2,10 +2,12 @@
 
 <div class="content-type--default">
     <article itemscope itemtype="https://schema.org/Article">
-        <h1 itemprop="name">{{ .Title }}</h1>
-        <div itemprop="articleBody" class="content">
-            {{ .Content }}
-        </div>
+        <section>
+            <h1 itemprop="name">{{ .Title }}</h1>
+            <div itemprop="articleBody" class="content">
+                {{ .Content }}
+            </div>
+        </section>
     </article>
 </div>
 
