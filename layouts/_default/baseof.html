@@ -7,7 +7,7 @@
         {{- block "header" . }}
         {{ $ctx := dict
           "page" .
-          "enableDrawer" true
+          "enableDrawer" false
         }}
         {{- partial "header.html" $ctx -}}
         {{- end }}

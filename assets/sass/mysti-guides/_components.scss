@@ -166,52 +166,57 @@
     gap: 1.5rem;
     max-width: 1500px;
     margin: auto;
-    .sidebar, >article {
+    >article {
         background-color: $bg-base-200;
         padding: 1rem;
         border-radius: $rounded;
     }
-    .sidebar {
-        position: sticky;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        top: 0;
-        overflow-y: auto;
-        width: 15rem;
 
-        .level-0 {
-            display: flex;
-            font-size: 1.2rem;
-        }
-        .toc {
-            list-style: none;
-        }
-        >.toc {
-            background-color: $bg-base-100;
-            padding: 1rem;
-            border-radius: $rounded;
-            .toc {
-                li {
-                    margin-left: 1rem;
-                }
-            }
-        }
-        .toc, li {
-            display: flex;
-            flex-direction: column;
-            gap: .2rem;
-            .btn {
-                padding: .4rem .6rem;
-                font-size: .9rem;
-            }
-        }
-    }
     >article {
         flex: 1;
         min-width: 0;
         >h1 {
             margin-bottom: 2rem;
+        }
+    }
+}
+
+.sidebar {
+    background-color: $bg-base-200;
+    padding: 1rem;
+    border-radius: $rounded;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    overflow-y: auto;
+    width: 18rem;
+
+    .level-0 {
+        display: flex;
+        font-size: 1.2rem;
+    }
+    .toc {
+        list-style: none;
+    }
+    >.toc {
+        background-color: $bg-base-100;
+        padding: 1rem;
+        border-radius: $rounded;
+        .toc {
+            li {
+                margin-left: 1rem;
+            }
+        }
+    }
+    .toc, li {
+        display: flex;
+        flex-direction: column;
+        gap: .2rem;
+        .btn {
+            padding: .4rem .6rem;
+            font-size: .9rem;
         }
     }
 }
@@ -229,13 +234,12 @@
 
 @media screen and (max-width: 1100px) {
     #__drawer-label {
-      display: initial;
+      display: inline-flex;
     }
-    .content-type--docs {
-        .sidebar {
-          position: fixed;
-          display: none;
-        }
+
+    .sidebar {
+      position: fixed;
+      display: none;
     }
 
     #__drawer:checked ~ #content .sidebar {
@@ -256,5 +260,11 @@
     .grid-container {
         display: flex;
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sidebar {
+      width: 60vw;
     }
 }
