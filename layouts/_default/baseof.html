@@ -2,7 +2,16 @@
 <html lang="{{ .Site.Params.languageTag | default "en" }}">
     {{- partial "head.html" . -}}
     <body>
-        {{- partial "header.html" . -}}
+        <input type="checkbox" id="__drawer" />
+        <header>
+        {{- block "header" . }}
+        {{ $ctx := dict
+          "page" .
+          "enableDrawer" true
+        }}
+        {{- partial "header.html" $ctx -}}
+        {{- end }}
+        </header>
         <main id="content">
         {{- block "main" . }}{{- end }}
         </main>
